@@ -2,7 +2,10 @@
 // import './App.css';
 import * as script from './assets/js/script.js'
 import * as locale from './assets/js/localeManager.js'
-let config = require('./config.json') 
+import * as appFactory from './components/application.js'
+import * as bookmarkFactory from './components/bookmarks.js'
+import * as config from './assets/js/configManager.js'
+import { Icon } from '@iconify/react';
 
 
 function Header(props){
@@ -25,10 +28,11 @@ function App() {
 
         <Header />
 
+
         <section id="apps">
             <h3>{locale.get('mainCategories', 'applications')}</h3>
             <div id="apps_loop">
-                
+                {appFactory.buildApps()}
             </div>
         </section>
 
@@ -36,12 +40,18 @@ function App() {
         <section id="links">
             <h3>{locale.get('mainCategories', 'bookmarks')}</h3>
             <div id="links_loop">
-                
+                {bookmarkFactory.buildBookmarks()}
             </div>
         </section>
         
 
       </main>
+
+      <div id="modal_init">
+        <a class="btn" href="#modal">
+            <Icon className="icon" icon="mdi-xbox-controller-menu"/>
+        </a>
+      </div>
     </div>
 
     

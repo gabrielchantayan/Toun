@@ -1,0 +1,17 @@
+{
+    "apps" : [
+        {"name":"Actual","url":"actual.example.com","icon":"bank", "target": "_blank"},
+        {"name":"BitWarden","url":"bitwarden.example.com","icon":"lock"},
+        {"name":"Bookstack","url":"bookstack.example.com","icon":"book-open-page-variant"},
+        {"name":"OwnCloud","url":"owncloud.example.com","icon":"cloud"},
+        {"name":"Paperless-NG","url":"paperless.example.com","icon":"file-document-multiple-outline"},
+        {"name":"PiHole","url":"pihole.example.com","icon":"shield-bug"},
+        {"name":"PhotoPrism","url":"photoprism.example.com","icon":"image-multiple"},
+        {"name":"Plex","url":"plex.example.com","icon":"plex"},
+        {"name":"Proxmox","url":"proxmox.example.com","icon":"server-network"},
+        {"name":"QBittorrent","url":"qb.example.com","icon":"download-network"},
+        {"name":"Shiori","url":"shiori.example.com","icon":"bookmark-multiple"},
+        {"name":"Wiki.JS","url":"wikijs.example.com","icon":"wikipedia"}
+    
+    ]
+}

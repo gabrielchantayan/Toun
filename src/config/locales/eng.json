@@ -1,4 +1,10 @@
 {
+    "info": {
+        "language": "English",
+        "short": "ENG",
+        "version": "0.1.0",
+        "authors": ["Gabriel Chantayan"]
+    },
     "greetings": {
         "goodMorning": "Good morning!",
         "goodAfternoon": "Good afternoon!",

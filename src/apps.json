@@ -1,5 +1,0 @@
-{
-    "apps" : [
-        {"name":"paperless-ng", "url": "192.168.0.39:4020", "icon": "file-document-multiple-outline"}
-    ]
-}

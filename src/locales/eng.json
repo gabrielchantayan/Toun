@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "Good morning!",
+        "goodAfternoon": "Good afternoon!",
+        "goodEvening": "Good evening!",
+        "goodNight": "Good night!"
+    },
+    "mainCategories": {
+        "applications": "Applications",
+        "bookmarks": "Bookmarks"
+    },
+    "subcategories": {
+        "media": "Media",
+        "communicate": "Communication",
+        "cloud": "Cloud",
+        "design": "Design",
+        "technology": "Technology",
+        "reading": "Reading",
+        "programming": "Programming",
+        "lifestyle": "Lifestyle",
+        "utilities": "Utilities"
+    }
+}

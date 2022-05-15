@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "Բարի լույս։",
+        "goodAfternoon": "Բարի օր։",
+        "goodEvening": "Բարի երեկո։",
+        "goodNight": "Բարի գիշեր։"
+    },
+    "mainCategories": {
+        "applications": "Հավելվածներ",
+        "bookmarks": "Էջանիշներ"
+    },
+    "subcategories": {
+        "media": "Մեդիա",
+        "communicate": "Հաղորդակցություն",
+        "cloud": "Ամպային",
+        "design": "Դիզայն",
+        "technology": "Տեխնոլոգիա",
+        "reading": "Ընթերցանություն",
+        "programming": "Ծրագրավորում",
+        "lifestyle": "Ապրելակերպ",
+        "utilities": "Գործիքներ"
+    }
+}

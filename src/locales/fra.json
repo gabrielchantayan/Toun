@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "Bonjour !",
+        "goodAfternoon": "Bon après-midi !",
+        "goodEvening": "Bonne soirée !",
+        "goodNight": "Bonne nuit !"
+    },
+    "mainCategories": {
+        "applications": "Applications",
+        "bookmarks": "Marque-pages"
+    },
+    "subcategories": {
+        "media": "Média",
+        "communicate": "Communication",
+        "cloud": "Nuage",
+        "design": "Design",
+        "technology": "Technologie",
+        "reading": "Lecture",
+        "programming": "Programmation",
+        "lifestyle": "Mode de vie",
+        "utilities": "Utilitaires"
+    }
+}

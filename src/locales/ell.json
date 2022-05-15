@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "Καλημέρα!",
+        "goodAfternoon": "Καλό απόγευμα!",
+        "goodEvening": "Καλό βράδυ!",
+        "goodNight": "Καλή νύχτα!"
+    },
+    "mainCategories": {
+        "applications": "Εφαρμογές",
+        "bookmarks": "Σελιδοδείκτες"
+    },
+    "subcategories": {
+        "media": "Μέσα",
+        "communicate": "Ανακοίνωση",
+        "cloud": "Σύννεφο",
+        "design": "Σχεδιασμός",
+        "technology": "Τεχνολογία",
+        "reading": "Ανάγνωση",
+        "programming": "Προγραμματισμός",
+        "lifestyle": "Τρόπος Ζωής",
+        "utilities": "Εργαλεία"
+    }
+}

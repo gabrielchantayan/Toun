@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "صباح الخير!",
+        "goodAfternoon": "مساء الخير!",
+        "goodEvening": "مساء الخير!",
+        "goodNight": "ليلة سعيدة!"
+    },
+    "mainCategories": {
+        "applications": "التطبيقات",
+        "bookmarks": "المفضلة"
+    },
+    "subcategories": {
+        "media": "وسائط",
+        "communicate": "تواصل",
+        "cloud": "سحابية",
+        "design": "التصميم",
+        "technology": "التكنولوجيا",
+        "reading": "القراءة",
+        "programming": "البرمجة",
+        "lifestyle": "أسلوب الحياة",
+        "utilities": "أدوات"
+    }
+}

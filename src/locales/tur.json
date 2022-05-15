@@ -1,0 +1,23 @@
+{
+    "greetings": {
+        "goodMorning": "Günaydın!",
+        "goodAfternoon": "Tünaydın!",
+        "goodEvening": "İyi akşamlar!",
+        "goodNight": "İyi geceler!"
+    },
+    "mainCategories": {
+        "applications": "Uygulamalar",
+        "bookmarks": "Yer imleri"
+    },
+    "subcategories": {
+        "media": "Medya",
+        "communicate": "İletişim",
+        "cloud": "Bulut",
+        "design": "Tasarım",
+        "technology": "Teknoloji",
+        "reading": "Okuma",
+        "programming": "Programlama",
+        "lifestyle": "Yaşam tarzı",
+        "utilities": "Aletler"
+    }
+}

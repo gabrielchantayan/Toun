@@ -1,20 +1,15 @@
-import * as config from './configManager'
-let locale = require(`../../config/locales/${config.get('locale')}.json`)  // Require the locale file as specified by locale in config
-console.log(locale)
+import * as config from './configManager';
+import * as utils from './utils';
+
+
+// let locale = require(`../../config/locales/${config.get('locale')}.json`)  // Require the locale file as specified by locale in config
+// console.log(locale)
 
 // Gets a localized string
-export function get(category, subcategory){
+export async function get(category, subcategory){
+    const locale = await getLocale();
 
-    // Check if localization exists
-    if (checkIfLocalizationExists(category, subcategory)){
-        // If so return it
-        return locale[category][subcategory];
-    }
-
-    // If not return the input
-    else {
-        return(subcategory)
-    }
+    return('')
 }
 
 // Check if localization exists
@@ -23,6 +18,8 @@ export function checkIfLocalizationExists(category, subcategory){
 }
 
 // Gets the locale
-export function getLocale(){
-    return config.get('locale');
+export async function getLocale(){
+    const locale = await utils.api('locale/get/default');
+
+    return locale;
 }

@@ -1,17 +1,28 @@
-import { readFile } from 'fs/promises';
+import loadLocale from './loadLocale.js'
 
 
+const getLocaleEntry = async (cat, subcat) => {
+    const locale = await loadLocale();
+    let entry = ''
 
-const getLocaleEntry = async (reqLocale) => {
-    // Check if locale exists
-    const localeExists = await checkFileExists(`data/locales/${reqLocale}.json`);
+    if (subcat === undefined){
+        if (locale.hasOwnProperty(cat)){
+            entry = locale[cat];
+        } else {
+            entry = `${cat}`
+        }
+    } else {
+        if (locale.hasOwnProperty(cat) && locale[cat].hasOwnProperty(subcat)){
+            entry = locale[cat][subcat];
+        } else {
+            entry = `${cat}.${subcat}`
+        }
+    }
 
-    let locale = (localeExists? reqLocale : 'en_US')
 
-    const localeFile = await readFile(`data/locales/${locale}.json`, 'utf-8');
-    const parsedLocale = JSON.parse(localeFile);
+    
 
-    return parsedLocale;
+    return entry;
 };
 
 export default getLocaleEntry;

@@ -1,16 +1,18 @@
 import { Router } from 'express';
 const router = Router();
 
-// updateConfig,
 
 import locale from '../controllers/locale/index.js';
 
-// router.get('/text/:category/:text', (req, res) => {
-//     return locale.getLocalizedText({"category": req.params.category, "text": req.params.text}, res)
-// });
+router.get('/entry/:cat/:subcat', (req, res) => {
+    return locale.getLocalizedText({"cat": req.params.cat, "subcat": req.params.subcat}, res)
+});
 
+router.get('/entry/:cat', (req, res) => {
+    return locale.getLocalizedText({"cat": req.params.cat}, res)
+});
 
-router.get('/:locale', (req, res) => {
+router.get('/get/:locale', (req, res) => {
     return locale.getLocale({"locale": req.params.locale}, res)
 });
 

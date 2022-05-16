@@ -20,17 +20,6 @@ function Header(props){
 
 
 function App() {
-
-  Axios({
-    method: "GET",
-    url: `http://localhost:3009/`,
-    headers: {
-      "Content-Type": "application/json"
-    }
-  }).then(res => {
-    console.log(res.data.message);
-  });
-
   return (
     <div>
       <main id="container" class="fade">

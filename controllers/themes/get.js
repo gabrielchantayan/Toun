@@ -1,24 +1,16 @@
-import asyncWrapper from '../../middleware/asyncWrapper.js'
-import loadConfig from '../../utils/config/loadConfig.js';
-import loadLocale from '../../utils/locale/loadLocale.js';
+import asyncWrapper from '../../middleware/asyncWrapper.js';
+import getLocalizedThemes from '../../utils/themes/getLocalizedThemes.js';
 
 // @desc      Get config
 // @route     GET /api/config
 // @access    Public
 const get = asyncWrapper(async (req, res, next) => {
     
-    if(req['locale'] != 'default'){
-        selectedLocale = req['locale'];
-    } else {
-        const config = await loadConfig();
-        selectedLocale = config['locale']
-    }
-
-    let locale = await loadLocale(selectedLocale)
+    let themes = await getLocalizedThemes();
 
     res.status(200).json({
         success: true,
-        data: locale,
+        data: themes,
     });
 
 });

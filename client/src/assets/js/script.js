@@ -25,18 +25,14 @@ export function greet() {
     case 0:
     case 1:
       return locale.get('greetings', 'goodNight');
-      break;
     case 2:
     case 3:
       return locale.get('greetings', 'goodMorning');
-      break;
     case 4:
     case 5:
       return locale.get('greetings', 'goodAfternoon');
-      break;
     case 6:
       return locale.get('greetings', 'goodEvening');
-      break;
   }
 }
 

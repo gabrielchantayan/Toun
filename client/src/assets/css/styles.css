@@ -388,21 +388,10 @@ table a {
     text-transform: uppercase;
 }
 
-.theme-blackboard {
-    background-color: #000000;
-    border: 4px solid #5c5c5c;
-    color: #FFFDEA;
-}
-
-.theme-gazette {
-    background-color: #F2F7FF;
-    border: 4px solid #5c5c5c;
-    color: #000000;
-}
 
 .theme-espresso {
     background-color: #21211F;
-    border: 4px solid #4E4E4E;
+    /* border: 4px solid #4E4E4E; */
     color: #D1B59A;
 }
 

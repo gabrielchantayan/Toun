@@ -6,6 +6,7 @@ import * as appFactory from './components/application.js'
 import * as bookmarkFactory from './components/bookmarks.js'
 import * as config from './assets/js/configManager.js'
 import { Icon } from '@iconify/react';
+import Axios from "axios";
 
 
 function Header(props){
@@ -19,6 +20,17 @@ function Header(props){
 
 
 function App() {
+
+  Axios({
+    method: "GET",
+    url: `http://localhost:3009/`,
+    headers: {
+      "Content-Type": "application/json"
+    }
+  }).then(res => {
+    console.log(res.data.message);
+  });
+
   return (
     <div>
       <main id="container" class="fade">

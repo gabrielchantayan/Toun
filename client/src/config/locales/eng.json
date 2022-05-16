@@ -2,7 +2,7 @@
     "info": {
         "language": "English",
         "short": "ENG",
-        "version": "0.1.0",
+        "version": 2,
         "authors": ["Gabriel Chantayan"]
     },
     "greetings": {
@@ -25,5 +25,32 @@
         "programming": "Programming",
         "lifestyle": "Lifestyle",
         "utilities": "Utilities"
+    },
+    "options": {
+        "options": "Options",
+        "themes": "Themes",
+        "searchOptions": "Search Options",
+        "close": "Close"
+    },
+    "themes": {
+        "blackboard": "Blackboard",
+        "gazette": "Gazette",
+        "espresso": "Espresso",
+        "armCoffee": "Armenian Coffee",
+        "cab": "Cab",
+        "cloud": "Cloud",
+        "lime": "Lime",
+        "white": "White",
+        "tron": "Tron",
+        "passion": "Passion",
+        "chalk": "Chalk",
+        "paper": "Paper",
+        "neon": "Neon",
+        "pumpkin": "Pumpkin",
+        "onedark": "OneDark",
+        "mint": "Mint"
+    },
+    "errors": {
+        "unknownTheme": "Unknown Theme"
     }
 }

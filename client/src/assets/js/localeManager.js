@@ -6,7 +6,7 @@ let locale = require(`../../config/locales/${config.get('locale')}.json`)  // Re
 export function get(category, subcategory){
 
     // Check if localization exists
-    if (locale[category].hasOwnProperty(subcategory)){
+    if (checkIfLocalizationExists(category, subcategory)){
         // If so return it
         return locale[category][subcategory];
     }
@@ -15,6 +15,11 @@ export function get(category, subcategory){
     else {
         return(subcategory)
     }
+}
+
+// Check if localization exists
+export function checkIfLocalizationExists(category, subcategory){
+    return (locale[category].hasOwnProperty(subcategory) ? true : false);
 }
 
 // Gets the locale

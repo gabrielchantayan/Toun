@@ -1,6 +1,6 @@
 import * as config from './configManager'
 let locale = require(`../../config/locales/${config.get('locale')}.json`)  // Require the locale file as specified by locale in config
-
+console.log(locale)
 
 // Gets a localized string
 export function get(category, subcategory){

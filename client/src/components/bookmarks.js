@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import { useAsync } from "react-async"
 import * as locale from '../assets/js/localeManager.js'
 let bookmarks = require('../config/bookmarks.json')
 

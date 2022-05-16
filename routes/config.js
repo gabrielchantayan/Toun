@@ -3,10 +3,14 @@ const router = Router();
 
 // updateConfig,
 
-import getConfig from '../controllers/config/index.js';
+import config from '../controllers/config/index.js';
 
-router.get('/', (req, res) => {
-    return getConfig.getConfig(req, res)
+router.get('/get', (req, res) => {
+    return config.getConfig(req, res)
+});
+
+router.get('/get/:key', (req, res) => {
+    return config.get(req.params.key, res)
 });
 
 export default router;

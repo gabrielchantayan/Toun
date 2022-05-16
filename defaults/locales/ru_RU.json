@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "Русский",
+        "short": "РУС",
+        "version": 2,
+        "authors": [
+            "Габриэль Чантайян"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "Доброе утро!",
+        "goodAfternoon": "Добрый день!",
+        "goodEvening": "Добрый вечер!",
+        "goodNight": "Доброй ночи!"
+    },
+    "mainCategories": {
+        "applications": "Приложения",
+        "bookmarks": "Закладки"
+    },
+    "subcategories": {
+        "media": "Медиа",
+        "communicate": "Коммуникация",
+        "cloud": "Облачные",
+        "design": "Дизайн",
+        "technology": "Технология",
+        "reading": "Чтение",
+        "programming": "Программирование",
+        "lifestyle": "Стиль жизни",
+        "utilities": "Утилиты"
+    },
+    "options": {
+        "options": "Опции",
+        "themes": "Темы",
+        "searchOptions": "Опции поиска",
+        "close": "Закрыть"
+    },
+    "themes": {
+        "blackboard": "Черный доск",
+        "gazette": "Газета",
+        "espresso": "Эспрессо",
+        "armCoffee": "Армянский кофе",
+        "cab": "Такси",
+        "cloud": "Облако",
+        "lime": "Лайм",
+        "white": "Белый",
+        "tron": "Трон",
+        "passion": "Страсть",
+        "chalk": "Мел",
+        "paper": "Бумага",
+        "neon": "Неон",
+        "pumpkin": "Тыква",
+        "onedark": "OneDark",
+        "mint": "Мята"
+    },
+    "errors": {
+        "unknownTheme": "Неизвестная тема"
+    }
+}

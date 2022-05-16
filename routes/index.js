@@ -1,7 +1,9 @@
 import config from './config.js';
-import locales from './locales.js';
+import locale from './locale.js';
+import themes from './themes.js';
 
 export default {
   config,
-  locales
+  locale,
+  themes
 };

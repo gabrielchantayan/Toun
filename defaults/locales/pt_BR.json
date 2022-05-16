@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "Português",
+        "short": "POR",
+        "version": 2,
+        "authors": [
+            "Gabriel Chantayan"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "Bom dia!",
+        "goodAfternoon": "Boa tarde!",
+        "goodEvening": "Boa noite!",
+        "goodNight": "Boa noite!"
+    },
+    "mainCategories": {
+        "applications": "Aplicações",
+        "bookmarks": "Favoritos"
+    },
+    "subcategories": {
+        "media": "Multimídia",
+        "communicate": "Comunicação",
+        "cloud": "Nuvem",
+        "design": "Desenho",
+        "technology": "Tecnologia",
+        "reading": "Lendo",
+        "programming": "Programação",
+        "lifestyle": "Estilo de vida",
+        "utilities": "Ferramentas"
+    },
+    "options": {
+        "options": "Opções",
+        "themes": "Temas",
+        "searchOptions": "Opções de Busca",
+        "close": "Fechar"
+    },
+    "themes": {
+        "blackboard": "Quadro-negro",
+        "gazette": "Jornal",
+        "espresso": "Expresso",
+        "armCoffee": "Café Armênio",
+        "cab": "Táxi",
+        "cloud": "Nuvem",
+        "lime": "Limão",
+        "white": "Branco",
+        "tron": "Tron",
+        "passion": "Paixão",
+        "chalk": "Chalk",
+        "paper": "Papel",
+        "neon": "Néon",
+        "pumpkin": "Abóbora",
+        "onedark": "OneDark",
+        "mint": "Hortelã"
+    },
+    "errors": {
+        "unknownTheme": "Tema Desconhecido"
+    }
+}

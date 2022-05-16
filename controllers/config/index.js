@@ -1,8 +1,8 @@
 import getConfig from './getConfig.js'
+import get from './get.js'
 
 export default {
-//   getCSS: require('./getCSS'),
-//   updateCSS: require('./updateCSS'),
-    getConfig
+    getConfig,
+    get
 //   updateConfig: require('./updateConfig'),
 };

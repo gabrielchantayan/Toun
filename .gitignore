@@ -9,6 +9,8 @@
 # testing
 /coverage
 /data/*
+/tools/translations_in/*
+/tools/translations_out/*
 
 # production
 /build

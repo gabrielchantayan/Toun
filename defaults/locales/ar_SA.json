@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "عربي",
+        "short": "عرب",
+        "version": 2,
+        "authors": [
+            "غابرييل تشانتايان"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "صباح الخير!",
+        "goodAfternoon": "مساء الخير!",
+        "goodEvening": "مساء الخير!",
+        "goodNight": "ليلة سعيدة!"
+    },
+    "mainCategories": {
+        "applications": "التطبيقات",
+        "bookmarks": "المفضلة"
+    },
+    "subcategories": {
+        "media": "وسائط",
+        "communicate": "تواصل",
+        "cloud": "سحابية",
+        "design": "التصميم",
+        "technology": "التكنولوجيا",
+        "reading": "القراءة",
+        "programming": "البرمجة",
+        "lifestyle": "أسلوب الحياة",
+        "utilities": "أدوات"
+    },
+    "options": {
+        "options": "الخيارات",
+        "themes": "المظاهر",
+        "searchOptions": "خيارات البحث",
+        "close": "أغلق"
+    },
+    "themes": {
+        "blackboard": "بلاك بورد",
+        "gazette": "جريدة",
+        "espresso": "بلاك بورد",
+        "armCoffee": "قهوة أرمينية",
+        "cab": "تاكسي",
+        "cloud": "سحابية",
+        "lime": "ليم",
+        "white": "أبيض",
+        "tron": "ترون",
+        "passion": "شغف",
+        "chalk": "طبشور",
+        "paper": "ورق",
+        "neon": "نيون",
+        "pumpkin": "يقطين",
+        "onedark": "OneDark",
+        "mint": "نعناع"
+    },
+    "errors": {
+        "unknownTheme": "مظهر غير معروف"
+    }
+}

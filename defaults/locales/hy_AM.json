@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "Հայերեն",
+        "short": "ՀԱՅ",
+        "version": 2,
+        "authors": [
+            "Գաբրիել Չանտայան"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "Բարի լույս։",
+        "goodAfternoon": "Բարի օր։",
+        "goodEvening": "Բարի երեկո։",
+        "goodNight": "Բարի գիշեր։"
+    },
+    "mainCategories": {
+        "applications": "Հավելվածներ",
+        "bookmarks": "Էջանիշներ"
+    },
+    "subcategories": {
+        "media": "Մեդիա",
+        "communicate": "Հաղորդակցություն",
+        "cloud": "Ամպային",
+        "design": "Դիզայն",
+        "technology": "Տեխնոլոգիա",
+        "reading": "Ընթերցանություն",
+        "programming": "Ծրագրավորում",
+        "lifestyle": "Ապրելակերպ",
+        "utilities": "Գործիքներ"
+    },
+    "options": {
+        "options": "Կարգավորումներ",
+        "themes": "Թեմաներ",
+        "searchOptions": "Որոնման Կարգավորումներ",
+        "close": "Փակել"
+    },
+    "themes": {
+        "blackboard": "Գրատախտակ",
+        "gazette": "Թերթ",
+        "espresso": "Էսպրեսսո",
+        "armCoffee": "Հայկական Սուրճ",
+        "cab": "Տաքսի",
+        "cloud": "Ամպ",
+        "lime": "Լայմ",
+        "white": "Սպիտակ",
+        "tron": "Տրոն",
+        "passion": "Կիրք",
+        "chalk": "Կավիճ",
+        "paper": "Թուղթ",
+        "neon": "Թուղթ",
+        "pumpkin": "Դդում",
+        "onedark": "OneDark",
+        "mint": "Անանուխ"
+    },
+    "errors": {
+        "unknownTheme": "Անհայտ Թեմա"
+    }
+}

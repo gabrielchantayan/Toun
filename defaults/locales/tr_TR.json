@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "Türkçe",
+        "short": "TÜR",
+        "version": 2,
+        "authors": [
+            "Gabriel Çantayan"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "Günaydın!",
+        "goodAfternoon": "Tünaydın!",
+        "goodEvening": "İyi akşamlar!",
+        "goodNight": "İyi geceler!"
+    },
+    "mainCategories": {
+        "applications": "Uygulamalar",
+        "bookmarks": "Yer imleri"
+    },
+    "subcategories": {
+        "media": "Medya",
+        "communicate": "İletişim",
+        "cloud": "Bulut",
+        "design": "Tasarım",
+        "technology": "Teknoloji",
+        "reading": "Okuma",
+        "programming": "Programlama",
+        "lifestyle": "Yaşam tarzı",
+        "utilities": "Aletler"
+    },
+    "options": {
+        "options": "Opsiyonlar",
+        "themes": "Temalar",
+        "searchOptions": "Arama Seçenekleri",
+        "close": "Kapatmak"
+    },
+    "themes": {
+        "blackboard": "Karatahta",
+        "gazette": "Gazete",
+        "espresso": "Espresso",
+        "armCoffee": "Ermeni Kahvesi",
+        "cab": "Taksi",
+        "cloud": "Bulut",
+        "lime": "Kireç",
+        "white": "Beyaz",
+        "tron": "Tron",
+        "passion": "Tutku",
+        "chalk": "Tebeşir",
+        "paper": "Kağıt",
+        "neon": "Neon",
+        "pumpkin": "Helvacı Kabağı",
+        "onedark": "OneDark",
+        "mint": "Nane"
+    },
+    "errors": {
+        "unknownTheme": "Bilinmeyen Tema"
+    }
+}

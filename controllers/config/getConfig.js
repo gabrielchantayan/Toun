@@ -1,5 +1,5 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js'
-import loadConfig from '../../utils/loadConfig.js'
+import loadConfig from '../../utils/config/loadConfig.js'
 
 // @desc      Get config
 // @route     GET /api/config

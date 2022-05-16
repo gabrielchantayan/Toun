@@ -1,17 +1,18 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js'
-import loadConfig from '../../utils/loadConfig.js'
+import loadConfig from '../../utils/config/loadConfig.js';
 
 // @desc      Get config
 // @route     GET /api/config
 // @access    Public
 const getLocalizedText = asyncWrapper(async (req, res, next) => {
-    console.log('Accessed config')
-
+    
     const config = await loadConfig();
+    let setLocale = config.get('locale')
+
 
     res.status(200).json({
         success: true,
-        data: config,
+        data: locale,
     });
 });
 

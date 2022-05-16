@@ -1,0 +1,58 @@
+{
+    "info": {
+        "language": "Ελληνικά",
+        "short": "ΕΛΛ",
+        "version": 2,
+        "authors": [
+            "Γαβριήλ Τσανταγιάν"
+        ]
+    },
+    "greetings": {
+        "goodMorning": "Καλημέρα!",
+        "goodAfternoon": "Καλό απόγευμα!",
+        "goodEvening": "Καλό βράδυ!",
+        "goodNight": "Καλή νύχτα!"
+    },
+    "mainCategories": {
+        "applications": "Εφαρμογές",
+        "bookmarks": "Σελιδοδείκτες"
+    },
+    "subcategories": {
+        "media": "Μέσα",
+        "communicate": "Ανακοίνωση",
+        "cloud": "Σύννεφο",
+        "design": "Σχεδιασμός",
+        "technology": "Τεχνολογία",
+        "reading": "Ανάγνωση",
+        "programming": "Προγραμματισμός",
+        "lifestyle": "Τρόπος Ζωής",
+        "utilities": "Εργαλεία"
+    },
+    "options": {
+        "options": "Επιλογές",
+        "themes": "Θέματα",
+        "searchOptions": "Επιλογές Αναζήτησης",
+        "close": "Κλείσε"
+    },
+    "themes": {
+        "blackboard": "Μαυροπίνακας",
+        "gazette": "Εφημερίδα",
+        "espresso": "Εσπρέσο",
+        "armCoffee": "Αρμενικός Καφές",
+        "cab": "Ταξί",
+        "cloud": "Σύννεφο",
+        "lime": "Λάιμ",
+        "white": "Λευκό",
+        "tron": "Τρον",
+        "passion": "Πάθος",
+        "chalk": "Κιμωλία",
+        "paper": "Χαρτί",
+        "neon": "Νέον",
+        "pumpkin": "Κολοκύθα",
+        "onedark": "OneDark",
+        "mint": "Μέντα"
+    },
+    "errors": {
+        "unknownTheme": "Άγνωστο Θέμα"
+    }
+}

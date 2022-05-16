@@ -1,6 +1,5 @@
 import { readFile } from 'fs/promises';
-import checkFileExists from './checkFileExists.js';
-import createConfig from './createConfig.js';
+import checkFileExists from '../files/checkFileExists.js';
 
 // Load config file
 const loadConfig = async () => {

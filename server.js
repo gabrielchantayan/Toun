@@ -25,6 +25,7 @@ function main (){
     app.use('/api/themes', routes.themes);
     app.use('/api/apps', routes.apps);
     app.use('/api/bookmarks', routes.bookmarks);
+    app.use('/api/search', routes.search);
 
 
 

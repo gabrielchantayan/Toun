@@ -161,6 +161,7 @@ async function initialize(){
     await checkFileExistsAndCreate('themes');
     await checkFileExistsAndCreate('apps');
     await checkFileExistsAndCreate('bookmarks');
+    await checkFileExistsAndCreate('searchOptions');
 
 }
 

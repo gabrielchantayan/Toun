@@ -19,13 +19,13 @@ function main (){
     // app.use((req, res, next) => {
     //   next();
     // });
-
-    app.use('/api/config', routes.config);
-    app.use('/api/locale', routes.locale);
-    app.use('/api/themes', routes.themes);
+    
     app.use('/api/apps', routes.apps);
     app.use('/api/bookmarks', routes.bookmarks);
+    app.use('/api/config', routes.config);
+    app.use('/api/locale', routes.locale);
     app.use('/api/search', routes.search);
+    app.use('/api/themes', routes.themes);
 
 
 

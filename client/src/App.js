@@ -9,8 +9,9 @@ import { Icon } from '@iconify/react';
 import Applications from './components/applications.js';
 import Bookmarks from './components/bookmarks.js';
 import Header from './components/header.js';
-import Axios from "axios";
+
 import React from 'react'
+import Search from './components/search.js';
 
 // function Header(props){
 //     return (
@@ -29,9 +30,7 @@ function App() {
     <div>
         <main id="container" class="fade">
 
-            <section id="search">
-                <input name="keywords" type="text" id="keywords" size="50" spellcheck="false" autofocus="true" onkeydown="handleKeyPress(event)"></input>
-            </section>
+            <Search />
 
             <Header />
 
@@ -47,6 +46,7 @@ function App() {
             <Icon className="icon" icon="mdi-xbox-controller-menu"/>
             </a>
         </div>
+
     </div>
 
 

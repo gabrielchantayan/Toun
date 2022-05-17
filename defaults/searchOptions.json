@@ -1,0 +1,49 @@
+{
+    "searchOptions" : {
+        "duckduckgo" : {
+            "name" : "DuckDuckGo",
+            "query": "https://duckduckgo.com/?q=",
+            "prefix": "d",
+            "other-lang": {
+                "ru-RU" : "д",
+                "hy-AM" : "դ"
+            }
+        },
+        "spotify": {
+            "name" : "Spotify",
+            "query": "https://open.spotify.com/search/results/",
+            "prefix": "s",
+            "other-lang": {
+                "ru-RU" : "с",
+                "hy-AM" : "ս"
+            }
+        },
+        "twitch": {
+            "name" : "Twitch.TV",
+            "query": "https://twitch.tv/",
+            "prefix": "t",
+            "other-lang": {
+                "ru-RU" : "т",
+                "hy-AM" : "թ"
+            }
+        },
+        "youtube": {
+            "name" : "YouTube",
+            "query": "https://www.youtube.com/results?search_query=",
+            "prefix": "y",
+            "other-lang": {
+                "ru-RU" : "ю",
+                "hy-AM" : "յ"
+            }
+        },
+        "yandex": {
+            "name" : "Яндекс",
+            "query": "https://yandex.ru/search/?text=",
+            "prefix": "y",
+            "other-lang": {
+                "ru-RU" : "я",
+                "hy-AM" : "յա"
+            }
+        }
+    }
+}

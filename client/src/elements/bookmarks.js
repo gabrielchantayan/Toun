@@ -11,8 +11,6 @@ function Bookmark(props){
 // Builds link list
 function buildLinks(props){
     
-    console.log(props)
-
     // Create list to store elements in
     let linkList = [];
 

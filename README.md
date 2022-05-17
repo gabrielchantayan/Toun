@@ -5,6 +5,13 @@ A [SUI](https://github.com/jeroenpardon/sui)-inspired start page built in React
 - Localization
 
 
+### TODO
+- Add version numbers to bookmarks and apps
+- Add app categories
+- Add search
+- Add modals
+
+
 
 ### API Documentation
 

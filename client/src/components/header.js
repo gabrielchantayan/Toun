@@ -1,4 +1,3 @@
-import * as locale from '../assets/js/localeManager.js'
 import * as script from '../assets/js/script.js'
 
 import React from 'react'

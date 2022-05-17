@@ -159,6 +159,8 @@ async function initialize(){
     await createConfig();
     await createLocales();
     await checkFileExistsAndCreate('themes');
+    await checkFileExistsAndCreate('apps');
+    await checkFileExistsAndCreate('bookmarks');
 
 }
 

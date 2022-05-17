@@ -23,6 +23,5 @@ export function checkIfLocalizationExists(category, subcategory){
 // Gets the locale
 export async function getLocale(){
     const locale = await api.get('config/get/locale');
-    console.log(locale)
     return locale;
 }

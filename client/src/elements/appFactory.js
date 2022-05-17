@@ -1,5 +1,4 @@
 import { Icon } from '@iconify/react';
-let apps = require('../config/apps.json')
 
 function App(props){
     return (
@@ -17,7 +16,7 @@ function App(props){
 }
 
 // Function to build apps
-export function buildApps(){
+export async function buildApps(apps){
 
     // Create a list to store elements in
     let appList = [];

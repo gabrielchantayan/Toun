@@ -23,6 +23,9 @@ function main (){
     app.use('/api/config', routes.config);
     app.use('/api/locale', routes.locale);
     app.use('/api/themes', routes.themes);
+    app.use('/api/apps', routes.apps);
+    app.use('/api/bookmarks', routes.bookmarks);
+
 
 
     app.listen(port, () => console.log("Backend server live on " + port));

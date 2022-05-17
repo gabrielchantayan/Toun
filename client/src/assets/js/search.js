@@ -89,9 +89,6 @@ function search(text) {
                 case "s":
                     window.location = "https://open.spotify.com/search/results/" + subtext;
                     break;
-                case "t":
-                    window.location = "https://twitch.tv/" + subtext;
-                    break;
                 case "tv":
                     window.location = "https://www.thetvdb.com/search?query=" + subtext;
                     break;

@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import * as locale from '../assets/js/localeManager.js'
+import * as locale from '../js/localeManager.js'
 
 
 export function Modal(props) {

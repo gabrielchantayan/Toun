@@ -1,57 +1,29 @@
 import * as locale from '../assets/js/localeManager.js'
-let bookmarks = require('../config/bookmarks.json')
+import React from 'react'
 
-// Normalizes category name
-function normalizeCategoryName(name) {
-    // Copied from StackOverflow
-    return name.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
-}
+export default class Bookmarks extends React.Component {
 
-function Bookmark(props){
-    return <a href={'"' + props['url'] + '"'} class="theme_color-border theme_text-select">{props['name']}</a>
-}
-
-
-// Builds link list
-function buildLinks(props){
-    
-    // console.log(props)
-
-    // Create list to store elements in
-    let linkList = [];
-
-    // Iterate through JSON
-    for (const link in props){
-        
-        linkList.push(Bookmark(props[link]))
-    }
-    
-
-    return linkList;
-}
-
-
-function Category(props){
-    return (
-        <div id="links_item">
-            <h4>{locale.get('subcategories', normalizeCategoryName(props['category']['category']))}</h4>
-
-            {buildLinks(props['category']['links'])}
-
-        </div>
-    );
-}
-
-// Function to build apps
-export function buildBookmarks(){
-
-    // Create a list to store elements in
-    let bookmarkList = [];
-
-    // Iterate through JSON, calling App(props)
-    for (const category in bookmarks['bookmarks']){
-        bookmarkList.push(<Category category={bookmarks['bookmarks'][category]}/>)
+    state = {
+        h3: []
     }
 
-    return bookmarkList;
+    constructor() {
+        super();
+        locale.get('mainCategories', 'bookmarks').then( (res) => {
+            this.setState({ h3: res })
+        })
+    }
+
+    render() {
+        return (
+         
+          <section id="links">
+                <h3>{this.state.h3}</h3>
+                <div id="links_loop">
+                    {/* {bookmarkFactory.buildBookmarks()} */}
+                </div>
+            </section>
+          
+        )
+    }
 }

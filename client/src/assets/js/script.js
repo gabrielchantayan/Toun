@@ -1,7 +1,7 @@
 import * as locale from './localeManager.js'  // Import Locale manager
 
 // Date function for main page
-export function date() {
+async function  date() {
   // Get date and set options
   let currentDate = new Date();
   let dateOptions = {
@@ -12,11 +12,13 @@ export function date() {
   };
 
   // Set date to locale
-  let date = currentDate.toLocaleDateString(locale.getLocale(), dateOptions);
+  const loc = await locale.getLocale();
+
+  let date = currentDate.toLocaleDateString(loc, dateOptions);
   return date;
 }
 
-export function greet() {
+async function greet() {
   let currentTime = new Date();
   let greet = Math.floor(currentTime.getHours() / 3);
   switch (greet) {
@@ -40,3 +42,5 @@ function loadFunctions() {
   // date();  
   greet();
 }
+
+export { date, greet }

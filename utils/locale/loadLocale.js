@@ -18,7 +18,7 @@ const loadLocale = async (reqLocale) => {
     // Check if locale exists
     const localeExists = await checkFileExists(`data/locales/${fixedLocale}.json`);
 
-    let locale = (localeExists? fixedLocale : 'en_US')
+    let locale = (localeExists? fixedLocale : 'en-US')
 
     const localeFile = await readFile(`data/locales/${locale}.json`, 'utf-8');
     const parsedLocale = JSON.parse(localeFile);

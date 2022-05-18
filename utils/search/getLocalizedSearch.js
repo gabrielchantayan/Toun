@@ -1,21 +1,36 @@
-import loadLocale from "../locale/loadLocale.js";
-import loadBookmarks from "./loadBookmarks.js";
+import getConfigEntry from "../config/getConfigEntry.js";
+import loadSearch from "./loadSearch.js";
 
-const getLocalizedBookmarks = async () => {
+const getLocalizedSearch = async () => {
 
-    const bookmarks = await loadBookmarks();
-    const locale = await loadLocale();
+    const search = await loadSearch();
+    const locale = await getConfigEntry('locale');
 
-    let locBookmarks = { "bookmarks": {}};
+    let locSearch = { "searchOptions": {}};
 
-    for (let cat in bookmarks['bookmarks']){
-        locBookmarks['bookmarks'][cat] = bookmarks['bookmarks'][cat];
-        let catToFind = locBookmarks['bookmarks'][cat]['category'].toLowerCase();
-        locBookmarks['bookmarks'][cat]['category'] = (locale['subcategories'].hasOwnProperty(catToFind) ? locale['subcategories'][catToFind] : bookmarks['bookmarks'][cat]['category']);
+    for (let i in search['searchOptions']){
+        locSearch['searchOptions'][i] = {
+            "query": search['searchOptions'][i]['query']
+        };
+
+        // Name
+        locSearch['searchOptions'][i]['name'] = 
+        (search['searchOptions'][i].hasOwnProperty('name-other-lang') && search['searchOptions'][i]['name-other-lang'].hasOwnProperty(locale) ?
+            search['searchOptions'][i]['name-other-lang'][locale]  
+        :
+            search['searchOptions'][i]['name']  
+        )
+
+        locSearch['searchOptions'][i]['prefix'] = 
+        (search['searchOptions'][i].hasOwnProperty('prefix-other-lang') && search['searchOptions'][i]['prefix-other-lang'].hasOwnProperty(locale) ?
+            search['searchOptions'][i]['prefix-other-lang'][locale]  
+        :
+            search['searchOptions'][i]['prefix']  
+        )
     }
-
-    return locBookmarks;
+    
+    return locSearch;
 
 };
 
-export default getLocalizedBookmarks;
+export default getLocalizedSearch;

@@ -4,7 +4,7 @@
             "name" : "DuckDuckGo",
             "query": "https://duckduckgo.com/?q=",
             "prefix": "d",
-            "other-lang": {
+            "prefix-other-lang": {
                 "ru-RU" : "д",
                 "hy-AM" : "դ"
             }
@@ -13,7 +13,7 @@
             "name" : "Spotify",
             "query": "https://open.spotify.com/search/results/",
             "prefix": "s",
-            "other-lang": {
+            "prefix-other-lang": {
                 "ru-RU" : "с",
                 "hy-AM" : "ս"
             }
@@ -22,7 +22,7 @@
             "name" : "Twitch.TV",
             "query": "https://twitch.tv/",
             "prefix": "t",
-            "other-lang": {
+            "prefix-other-lang": {
                 "ru-RU" : "т",
                 "hy-AM" : "թ"
             }
@@ -31,7 +31,7 @@
             "name" : "YouTube",
             "query": "https://www.youtube.com/results?search_query=",
             "prefix": "y",
-            "other-lang": {
+            "prefix-other-lang": {
                 "ru-RU" : "ю",
                 "hy-AM" : "յ"
             }
@@ -39,10 +39,13 @@
         "yandex": {
             "name" : "Яндекс",
             "query": "https://yandex.ru/search/?text=",
-            "prefix": "y",
-            "other-lang": {
+            "prefix": "ya",
+            "prefix-other-lang": {
                 "ru-RU" : "я",
                 "hy-AM" : "յա"
+            },
+            "name-other-lang": {
+                "en-US": "Yandex"
             }
         }
     }

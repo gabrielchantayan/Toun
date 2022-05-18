@@ -7,7 +7,7 @@ export default class Search extends React.Component {
 
     componentDidMount(){
         window.addEventListener('keydown', e => {
-            searchUtil.handleKeyPress(e)
+            searchUtil.handleKeyPress(e, this.state.searchOptions)
         })
     }
 
@@ -17,6 +17,11 @@ export default class Search extends React.Component {
 
     constructor() {
         super();
+
+        searchUtil.getShort().then((res) => {
+            this.setState({ searchOptions: res })
+        });
+
     }
 
     render() {

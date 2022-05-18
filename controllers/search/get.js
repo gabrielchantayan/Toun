@@ -1,9 +1,9 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js'
-import loadSearch from '../../utils/search/loadSearch.js';
+import getLocalizedSearch from '../../utils/search/getLocalizedSearch.js';
 
 const get = asyncWrapper(async (req, res, next) => {
 
-    const search = await loadSearch();
+    const search = await getLocalizedSearch();
 
     res.status(200).json({
         success: true,

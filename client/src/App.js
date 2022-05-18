@@ -12,6 +12,7 @@ import Header from './components/header.js';
 
 import React from 'react'
 import Search from './components/search.js';
+import Modal from './components/modal.js';
 
 // function Header(props){
 //     return (
@@ -29,6 +30,8 @@ function App() {
     return (
     <div>
         <main id="container" class="fade">
+
+            <Modal />
 
             <Search />
 

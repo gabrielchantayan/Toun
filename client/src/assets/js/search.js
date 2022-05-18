@@ -17,7 +17,6 @@ var cycle = false;
 // }
 
 function handleKeyPress(e, options) {
-    console.log(options)
     var key = e.keyCode || e.which;
     var text = document.getElementById("keywords").value.replaceAll("+", "%2B");
     var option = text.substr(1, text.indexOf(' ') - 1) || text.substr(1);

@@ -30,7 +30,9 @@
         "options": "Options",
         "themes": "Themes",
         "searchOptions": "Search Options",
-        "close": "Close"
+        "close": "Close",
+        "website": "Website",
+        "prefix": "Prefix"
     },
     "themes": {
         "blackboard": "Blackboard",

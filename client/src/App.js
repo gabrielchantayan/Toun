@@ -9,6 +9,8 @@ import { Icon } from '@iconify/react';
 import Applications from './components/applications.js';
 import Bookmarks from './components/bookmarks.js';
 import Header from './components/header.js';
+import Head from './components/setHead.js';
+
 
 import React from 'react'
 import Search from './components/search.js';
@@ -29,6 +31,9 @@ import Modal from './components/modal.js';
 function App() {
     return (
     <div>
+
+        <Head />
+
         <main id="container" class="fade">
 
             <Modal />

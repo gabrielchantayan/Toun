@@ -11,6 +11,10 @@ router.get('/getCSS', (req, res) => {
     return theme.getCSS(req, res)
 });
 
+router.get('/getCurrent', (req, res) => {
+    return theme.getCurrentThemeSettings(req, res)
+});
+
 router.get('/get', (req, res) => {
     return theme.get(req, res)
 });

@@ -2,16 +2,21 @@ import { Icon } from '@iconify/react';
 import * as themes from '../assets/js/themeManager.js'
 import * as search from '../assets/js/search.js'
 import * as locale from '../assets/js/localeManager.js'
+import generateThemeButtons from '../elements/themeButton.js'
 
 import React from 'react'
+
+
+
+
 
 export default class Modal extends React.Component {
     
     state = {
         themes: [],
-        themeCSS: [],
         search: [],
-        locale: []
+        locale: [],
+        themeButtons: []
     }
 
     constructor() {
@@ -20,17 +25,17 @@ export default class Modal extends React.Component {
         themes.get().then((res) => {
             this.setState(prevState => ({
                 themes: [...prevState.themes, res]
-            }))
+            }));
+            
+            generateThemeButtons(res['themes']).then((ress) => {
+                this.setState(prevState => ({
+                    themeButtons: [...prevState.themeButtons, ress]
+                }))
+            });
+
         });
 
         
-
-        themes.getCSS().then((res) => {
-            this.setState(prevState => ({
-                themeCSS: [...prevState.themeCSS, res]
-            }))
-        });
-
         search.get().then((res) => {
             this.setState(prevState => ({
                 search: [...prevState.search, res]
@@ -43,17 +48,16 @@ export default class Modal extends React.Component {
             }))
         });
 
+        
+
     }
 
     componentDidMount() {
 
         // God this is such hacky bullshit
 
-        const $style = document.createElement("style");
-        document.head.appendChild($style);
-        $style.innerHTML = this.state.themeCSS;
+        
     }
-
 
     renderLocale(loc){
         try {
@@ -64,7 +68,7 @@ export default class Modal extends React.Component {
     render(){
         return (
             <section id="modal">
-                <div>
+                <div id="main">
                     <header id="modal-header">
                         <h1>{this.renderLocale('options')}</h1>
                         <a href="#" title={'"' + this.renderLocale('close') + '"'} class="modal-close">
@@ -75,17 +79,7 @@ export default class Modal extends React.Component {
                     <h2>{this.renderLocale('themes')}</h2>
 
                     <div id="modal-theme">
-                        <button data-theme="blackboard" class="theme-button theme-blackboard">Blackboard</button>
-                        <button data-theme="gazette" class="theme-button theme-gazette">Gazette</button>
-                        <button data-theme="espresso" class="theme-button theme-espresso">Espresso</button>
-                        <button data-theme="cab" class="theme-button theme-cab">Cab</button>
-                        <button data-theme="cloud" class="theme-button theme-cloud">Cloud</button>
-                        <button data-theme="lime" class="theme-button theme-lime">Lime</button>
-                        <button data-theme="passion" class="theme-button theme-passion">Passion</button>
-                        <button data-theme="blues" class="theme-button theme-blues">Blues</button>
-                        <button data-theme="chalk" class="theme-button theme-chalk">Chalk</button>
-                        <button data-theme="tron" class="theme-button theme-tron">Tron</button>
-                        <button data-theme="paper" class="theme-button theme-paper">Paper</button>
+                        {this.state.themeButtons}
                     </div>
 
                     <h2>{this.renderLocale('searchOptions')}</h2>
@@ -112,6 +106,8 @@ export default class Modal extends React.Component {
                         <a href="https://materialdesignicons.com/"><span class="iconify" data-icon="mdi-material-design"></span></a>
                     </header>
                 </div>
+
+
             </section>
         );
     }

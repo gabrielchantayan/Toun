@@ -1,4 +1,5 @@
 {
+    "version": 1,
     "themes": {
         "blackboard": {
             "name": "Blackboard",
@@ -21,9 +22,9 @@
         "espresso": {
             "name": "Espresso",
             "colors": {
-                "background": "#D1B59A",
+                "background": "#E1C8AF",
                 "primary": "#21211F",
-                "accent": "#A18367"
+                "accent": "#625346"
             },
             "isCustom": false
         },

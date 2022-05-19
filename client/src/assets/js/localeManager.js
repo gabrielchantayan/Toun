@@ -1,27 +1,49 @@
-// import * as config from './configManager';
-import * as api from './api';
+////
+//// INIT STUFFS
+////
+import * as api from './api.js';   // Import API
+
+// Get locale file
+async function getAndStoreLocaleFile(){
+    
+    // Check local storage
+    // If a locale is saved, return the locale
+    // If not use default locale
+    let localeToGet = (localStorage.hasOwnProperty('locale') ? localStorage.getItem('locale') : 'default')
+
+    // Get locale from api
+    const file = await api.get(`locale/get/${localeToGet}`);
+    
+    // Return
+    return file;
+}
+
+// No top-level awaits ;(
+const savedLocale = getAndStoreLocaleFile();
 
 
-// let locale = require(`../../config/locales/${config.get('locale')}.json`)  // Require the locale file as specified by locale in config
-// console.log(locale)
+////
+//// FUNCTIONS
+////
 
 // Gets a localized string
 export async function get(cat, subcat){
 
-    let apiCall = `locale/entry/${cat}/${( subcat === undefined ? '' : subcat) }`
-
-    const locale = await api.get(apiCall);
+    // Grab saved locale
+    let locale = await savedLocale;
     
-    return locale;
+    // If there is no subcategory, return the category
+    // If there is a subcategory, return subcategory
+    return ( subcat === undefined ? locale[cat] : locale[cat][subcat]);
 }
 
-// Check if localization exists
-export function checkIfLocalizationExists(category, subcategory){
-    // return (locale[category].hasOwnProperty(subcategory) ? true : false);
-}
 
 // Gets the locale
 export async function getLocale(){
-    const locale = await api.get('config/get/locale');
-    return locale;
+
+    // API Call to config
+    const defaultLocale = await api.get('config/get/locale');
+
+    // Return
+    return defaultLocale;
 }

@@ -2,7 +2,7 @@
     "info": {
         "language": "Հայերեն",
         "short": "ՀԱՅ",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Գաբրիել Չանտայան"
         ]
@@ -32,7 +32,15 @@
         "options": "Կարգավորումներ",
         "themes": "Թեմաներ",
         "searchOptions": "Որոնման Կարգավորումներ",
-        "close": "Փակել"
+        "close": "Փակել",
+        "website": "Կայք",
+        "prefix": "Նախածանց",
+        "langSettings": "Լեզվի կարգավորումներ",
+        "adminLogin": "Ադմինիստրատորի մուտք",
+        "editDefault": "Խմբագրել լռելյայն կարգավորումները",
+        "username": "Անուն",
+        "password": "Գաղտնաբառ",
+        "passIncorrect": "Սխալ Գաղտնաբառ"
     },
     "themes": {
         "blackboard": "Գրատախտակ",

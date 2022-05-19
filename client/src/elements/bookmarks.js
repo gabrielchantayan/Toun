@@ -4,7 +4,7 @@ import React from 'react'
 
 
 function Bookmark(props){
-    return <a href={props['url']} class="theme_color-border theme_text-select">{props['name']}</a>
+    return <a key={props['name']} href={props['url']} className="theme_color-border theme_text-select">{props['name']}</a>
 }
 
 
@@ -27,7 +27,7 @@ function buildLinks(props){
 function Category(props) {
     return (
         <div id="links_item">
-            <h4>{props['category']['category']}</h4>
+            <h4 key={props['category']['category']}>{props['category']['category']}</h4>
             { buildLinks(props['category']['links']) }
         </div>
     )
@@ -55,7 +55,7 @@ export async function buildBookmarks(bkList){
 
     // // Iterate through JSON, calling App(props)
     for (const category in bkList['bookmarks']){
-        bookmarkList.push(<Category category={bkList['bookmarks'][category]}/>)
+        bookmarkList.push(<Category key={category} category={bkList['bookmarks'][category]}/>)
         // bookmarkList.push(<h1>d</h1>)
 
     }

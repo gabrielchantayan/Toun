@@ -2,7 +2,7 @@
     "info": {
         "language": "Français",
         "short": "FRA",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Gabriel Chantayan"
         ]
@@ -32,7 +32,15 @@
         "options": "Options",
         "themes": "Thèmes",
         "searchOptions": "Options de Recherche",
-        "close": "Fermer"
+        "close": "Fermer",
+        "website": "Site Web",
+        "prefix": "Préfixe",
+        "langSettings": "Paramètres de langue",
+        "adminLogin": "Connexion de l'administrateur",
+        "editDefault": "Modifier les paramètres par défaut",
+        "username": "Nom d'utilisateur",
+        "password": "Mot de passe",
+        "passIncorrect": "Mot de passe incorrect"
     },
     "themes": {
         "blackboard": "Tableau Noir",

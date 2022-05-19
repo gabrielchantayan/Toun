@@ -2,7 +2,7 @@
     "info": {
         "language": "Русский",
         "short": "РУС",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Габриэль Чантайян"
         ]
@@ -32,7 +32,15 @@
         "options": "Опции",
         "themes": "Темы",
         "searchOptions": "Опции поиска",
-        "close": "Закрыть"
+        "close": "Закрыть",
+        "website": "Сайт",
+        "prefix": "Префикс",
+        "langSettings": "Языковые настройки",
+        "adminLogin": "Логин Администратора",
+        "editDefault": "Изменить настройки по умолчанию",
+        "username": "Имя пользователя",
+        "password": "Пароль",
+        "passIncorrect": "Неверный пароль"
     },
     "themes": {
         "blackboard": "Черный доск",

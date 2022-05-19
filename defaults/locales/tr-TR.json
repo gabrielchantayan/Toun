@@ -2,7 +2,7 @@
     "info": {
         "language": "Türkçe",
         "short": "TÜR",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Gabriel Çantayan"
         ]
@@ -32,7 +32,15 @@
         "options": "Opsiyonlar",
         "themes": "Temalar",
         "searchOptions": "Arama Seçenekleri",
-        "close": "Kapatmak"
+        "close": "Kapatmak",
+        "website": "İnternet sitesi",
+        "prefix": "Önek",
+        "langSettings": "Dil ayarları",
+        "adminLogin": "Yönetici girişi",
+        "editDefault": "Varsayılan ayarları düzenle",
+        "username": "Kullanıcı adı",
+        "password": "Parola",
+        "passIncorrect": "Yanlış Parola"
     },
     "themes": {
         "blackboard": "Karatahta",

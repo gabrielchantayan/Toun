@@ -2,7 +2,7 @@
     "info": {
         "language": "عربي",
         "short": "عرب",
-        "version": 2,
+        "version": 3,
         "authors": [
             "غابرييل تشانتايان"
         ]
@@ -32,7 +32,15 @@
         "options": "الخيارات",
         "themes": "المظاهر",
         "searchOptions": "خيارات البحث",
-        "close": "أغلق"
+        "close": "أغلق",
+        "website": "الموقع",
+        "prefix": "البادئة",
+        "langSettings": "إعدادات اللغة",
+        "adminLogin": "دخول المدير",
+        "editDefault": "تعديل الإعدادات الافتراضية",
+        "username": "اسم المستخدم",
+        "password": "كلمة المرور",
+        "passIncorrect": "كلمة المرور خاطئة"
     },
     "themes": {
         "blackboard": "بلاك بورد",

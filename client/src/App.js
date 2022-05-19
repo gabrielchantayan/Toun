@@ -34,7 +34,7 @@ function App() {
 
         <Head />
 
-        <main id="container" class="fade">
+        <main id="container" className="fade">
 
             <Modal />
 
@@ -50,7 +50,7 @@ function App() {
         </main>
 
         <div id="modal_init">
-            <a class="btn" href="#modal">
+            <a className="btn" href="#modal">
             <Icon className="icon" icon="mdi-xbox-controller-menu"/>
             </a>
         </div>

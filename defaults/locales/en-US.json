@@ -2,7 +2,7 @@
     "info": {
         "language": "English",
         "short": "ENG",
-        "version": 2,
+        "version": 3,
         "authors": ["Gabriel Chantayan"]
     },
     "greetings": {
@@ -32,7 +32,13 @@
         "searchOptions": "Search Options",
         "close": "Close",
         "website": "Website",
-        "prefix": "Prefix"
+        "prefix": "Prefix",
+        "langSettings": "Language Settings",
+        "adminLogin": "Admin Login",
+        "editDefault": "Edit default settings",
+        "username": "Username",
+        "password": "Password",
+        "passIncorrect": "Incorrect Password"
     },
     "themes": {
         "blackboard": "Blackboard",

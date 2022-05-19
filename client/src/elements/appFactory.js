@@ -2,12 +2,11 @@ import { Icon } from '@iconify/react';
 
 function App(props){
     return (
-        <div class="apps_item">
-            <div class="apps_icon">
+        <div className="apps_item">
+            <div className="apps_icon">
                 <Icon className="icon" icon={"mdi-" + props.app.icon} />
-                {/* <span class="iconify icon" data-icon={"mdi-" + props.app.icon}></span> */}
             </div>
-            <div class="apps_text">
+            <div className="apps_text">
                 <a href={"http://" + props.app.url }>{props.app.name}</a>
                 <span id="app-address">{props.app.url}</span>
             </div>
@@ -23,7 +22,7 @@ export async function buildApps(apps){
 
     // Iterate through JSON, calling App(props)
     for (const app in apps['apps']){
-        appList.push(<App app={apps['apps'][app]}/>)
+        appList.push(<App key={app} app={apps['apps'][app]}/>)
     }
 
     return appList;

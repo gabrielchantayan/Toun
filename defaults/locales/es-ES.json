@@ -2,7 +2,7 @@
     "info": {
         "language": "Español",
         "short": "ESP",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Gabriel Chantayán"
         ]
@@ -32,7 +32,15 @@
         "options": "Opciones",
         "themes": "Temas",
         "searchOptions": "Opciones de Búsqueda",
-        "close": "Cerrar"
+        "close": "Cerrar",
+        "website": "Sitio web",
+        "prefix": "Prefijo",
+        "langSettings": "Configuración de Idioma",
+        "adminLogin": "Login de Admin",
+        "editDefault": "Editar configuración predeterminada",
+        "username": "Usuario",
+        "password": "Contraseña",
+        "passIncorrect": "Contraseña incorrecta"
     },
     "themes": {
         "blackboard": "Tabla negra",

@@ -26,6 +26,6 @@ function themeClick(colors){
 
 function ThemeButton(theme, themes){
     return (
-        <button data-theme={theme} class={"theme-button theme-" + theme} onClick={() => themeClick(themes.colors)}>{themes.name}</button>
+        <button key={theme} data-theme={theme} className={"theme-button theme-" + theme} onClick={() => themeClick(themes.colors)}>{themes.name}</button>
     )
 }

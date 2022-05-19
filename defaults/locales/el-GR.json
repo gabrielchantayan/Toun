@@ -2,7 +2,7 @@
     "info": {
         "language": "Ελληνικά",
         "short": "ΕΛΛ",
-        "version": 2,
+        "version": 3,
         "authors": [
             "Γαβριήλ Τσανταγιάν"
         ]
@@ -32,7 +32,15 @@
         "options": "Επιλογές",
         "themes": "Θέματα",
         "searchOptions": "Επιλογές Αναζήτησης",
-        "close": "Κλείσε"
+        "close": "Κλείσε",
+        "website": "Ιστότοπος",
+        "prefix": "Πρόθεμα",
+        "langSettings": "Ρυθμίσεις Γλώσσας",
+        "adminLogin": "Σύνδεση Διαχειριστή",
+        "editDefault": "Επεξεργασία προεπιλεγμένων ρυθμίσεων",
+        "username": "Όνομα Χρήστη",
+        "password": "Κωδικός",
+        "passIncorrect": "Εσφαλμένος Κωδικός Πρόσβασης"
     },
     "themes": {
         "blackboard": "Μαυροπίνακας",

@@ -113,7 +113,7 @@ input:focus {
 // TABLES
 %table-border {
     border: thin solid var(--color-text-acc);
-    color: #333333;
+    color: var(--color-text-pri);
     padding: 10px 5px;
 }
 
@@ -309,6 +309,7 @@ table {
 
     h2 {
         margin-top: 1.5em;
+        font-weight: revert;
     }
 
     
@@ -374,6 +375,52 @@ table {
 .theme-button:hover {
     font-weight: bold;
 }
+
+// Dropdowns
+.reactButton {
+    &__control,
+    &__menu {
+        background-color: var(--color-background) !important;
+    }
+
+    &__menu {
+        margin: 0.125rem auto !important;
+    }
+
+    &__option {
+        background-color: var(--color-background) !important;
+
+        &--is-focused {
+            color: var(--color-background) !important;
+            background-color: var(--color-text-pri) !important;
+        }
+    }
+
+    &__group {
+        padding: 0 !important;
+    }
+
+    &__menu-portal {
+        border: 1px solid var(--color-acc) !important;
+    }
+}
+
+
+
+// Fits
+$colpadding: 2.5%;
+.column {
+    display: flex;
+}
+.leftColumn {
+    width: 50% - $colpadding;
+    padding-right: $colpadding;
+}
+.rightColumn{
+    width: 50% - $colpadding;
+    padding-left: $colpadding;
+}
+
 
 
 // Media Queries

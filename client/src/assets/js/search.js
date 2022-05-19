@@ -122,5 +122,23 @@ async function getShort(){
 }
 
 
+async function getProviders(){
+    let search = await get()
 
-export { handleKeyPress, get, getShort }
+    let boof=[]
+
+    for (let opt in search['searchOptions']){
+        boof.push(
+            <tr key={opt}>
+                <td><a href={search['searchOptions'][opt]['url']}>{search['searchOptions'][opt]['name']}</a></td>
+                <td>${search['searchOptions'][opt]['prefix']}</td>
+            </tr>
+        )
+    }
+
+    return(boof)
+
+}
+
+
+export { handleKeyPress, get, getShort, getProviders }

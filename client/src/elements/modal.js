@@ -18,7 +18,7 @@ import * as locale from '../assets/js/localeManager.js'
 // async function genHeader(){
 //     <header id="modal-header">
 //         <h1>{locale.get('options', 'options')}</h1>
-//         <a href="#" title={'"' + locale.get('options', 'close') + '"'} class="modal-close">
+//         <a href="#" title={'"' + locale.get('options', 'close') + '"'} className="modal-close">
 //             <Icon icon="mdi-close" />
 //         </a>
 //     </header>

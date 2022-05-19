@@ -27,7 +27,7 @@ export default class Search extends React.Component {
     render() {
         return (
             <section id="search">
-                <input name="keywords" type="text" id="keywords" size="50" spellcheck="false" autofocus="true"></input>
+                <input name="keywords" type="text" id="keywords" size="50" spellCheck="false" autoFocus={true}></input>
             </section>
         )
     }

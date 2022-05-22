@@ -36,9 +36,8 @@ export default class LanguageSelector extends React.Component {
     }
 
     handleInputChange = (newValue: string) => {
-        const inputValue = newValue.replace(/\W/g, '');
-        this.setState({ inputValue });
-        return inputValue;
+        localStorage.setItem('locale', newValue['value']);
+        window.location.reload();
     };
 
 
@@ -50,7 +49,7 @@ export default class LanguageSelector extends React.Component {
                     cacheOptions
                     loadOptions={getOptions}
                     defaultOptions
-                    onInputChange={this.handleInputChange}
+                    onChange={this.handleInputChange}
                 />
             </div>
             );

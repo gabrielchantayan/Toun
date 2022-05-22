@@ -338,6 +338,15 @@ table a {
   font-weight: revert;
 }
 
+#modal #modal-footer {
+  margin: auto;
+  width: 100%;
+}
+
+#modal #modal-footer .icon {
+  font-size: 1.5em;
+}
+
 #modal-header {
   display: -webkit-box;
   display: -ms-flexbox;

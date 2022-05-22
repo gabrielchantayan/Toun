@@ -115,8 +115,10 @@ export default class Modal extends React.Component {
                     </div>
 
                     <header id="modal-footer">
-                        <a href="https://github.com/jeroenpardon/"><span className="iconify" data-icon="mdi-github-box"></span></a>
-                        <a href="https://materialdesignicons.com/"><span className="iconify" data-icon="mdi-material-design"></span></a>
+
+                        <a href="https://github.com/gabrielchantayan/Toun/"><Icon className="icon" icon={"mdi-github-box"} /></a>
+
+                        {/* <a href="https://materialdesignicons.com/"><span className="iconify" data-icon="mdi-material-design"></span></a> */}
                     </header>
                 </div>
 

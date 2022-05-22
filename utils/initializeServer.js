@@ -2,6 +2,7 @@ import checkFileExists from './files/checkFileExists.js';
 import { copyFile, readFile, writeFile, mkdir, readdir } from 'fs/promises';
 import defaultConfig from '../defaults/config.json' assert {type: "json"};
 import 'dotenv/config' 
+import processDotEnvs from './config/processDotEnvs.js';
 
 const logLangCreate = process.env.LOG_INIT_LANGCREATE   // Log locale messgaes
 const logInitConfig = process.env.LOG_INIT_CONFIG       // Log config messages
@@ -127,6 +128,9 @@ async function checkFileExistsAndCreate(file) {
 
 async function initialize(){
     console.log("Initializing server...");
+
+    // Feed dotenvs to client
+    await processDotEnvs();
 
     //// 
     //// Check if folders exist

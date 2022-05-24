@@ -292,6 +292,18 @@ table a {
   pointer-events: auto;
 }
 
+.modalTab.selected {
+  display: inline-block;
+  pointer-events: auto;
+}
+
+.modalTab {
+  display: none;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 #modal {
   overflow-y: auto;
   bottom: 0;
@@ -341,33 +353,50 @@ table a {
 #modal #modal-footer {
   margin: auto;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal #modal-footer span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #modal #modal-footer .icon {
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-left: .5em;
 }
 
-#modal-header {
+#modal #modal-footer a {
+  margin-left: .3em;
+  margin-right: 0.25em;
+  font-size: 0.5em;
+}
+
+.modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-#modal-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 2em;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-#modal-footer a {
-  margin-right: 0.25em;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .modal-close {
@@ -417,6 +446,14 @@ table a {
 
 .theme-button:hover {
   font-weight: bold;
+}
+
+#passwordDiv {
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+  width: 50%;
 }
 
 .reactButton__control, .reactButton__menu {

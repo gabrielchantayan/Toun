@@ -271,6 +271,17 @@ table {
     pointer-events: auto;
 }
 
+.modalTab.selected {
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.modalTab {
+    display: none;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
 #modal {
     overflow-y: auto;
     bottom: 0;
@@ -316,9 +327,27 @@ table {
     #modal-footer {
         margin: auto;
         width: 100%;
+        display: flex;
+        font-size: 2em;
+        justify-content: center;
+        align-items: center;
+
+        span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .icon {
-            font-size: 1.5em;
+            font-size: 1em;
+            margin-left: .5em;
+        }
+
+        a {
+            margin-left: .3em;
+            margin-right: 0.25em;
+            font-size: 0.5em;
+
         }
 
     }
@@ -326,20 +355,12 @@ table {
     
 }
 
-#modal-header {
+.modal-header {
     display: flex;
     justify-content: space-between;
+    align-self: flex-start;
 }
 
-#modal-footer {
-    display: flex;
-    font-size: 2em;
-    justify-content: flex-start;
-
-    a {
-        margin-right: 0.25em;
-    }
-}
 
 .modal-close {
     color: var(--color-text-pri);
@@ -386,6 +407,21 @@ table {
 .theme-button:hover {
     font-weight: bold;
 }
+
+
+// Admin login pass form
+
+#passwordDiv {
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    width: 50%
+
+    
+}
+
+
 
 // Dropdowns
 .reactButton {

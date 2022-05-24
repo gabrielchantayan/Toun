@@ -26,6 +26,7 @@ function main (){
     app.use('/api/locale', routes.locale);
     app.use('/api/search', routes.search);
     app.use('/api/themes', routes.themes);
+    app.use('/api/login', routes.login);
 
 
 

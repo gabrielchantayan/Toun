@@ -4,6 +4,7 @@ import themes from './themes.js';
 import apps from './apps.js';
 import bookmarks from './bookmarks.js';
 import search from './search.js';
+import login from './login.js';
 
 export default {
   config,
@@ -11,5 +12,6 @@ export default {
   themes,
   apps,
   bookmarks,
-  search
+  search,
+  login
 };

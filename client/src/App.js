@@ -51,7 +51,7 @@ function App() {
 
         <div id="modal_init">
             <a className="btn" href="#modal">
-            <Icon className="icon" icon="mdi-xbox-controller-menu"/>
+                <Icon className="icon" icon="mdi-xbox-controller-menu"/>
             </a>
         </div>
 

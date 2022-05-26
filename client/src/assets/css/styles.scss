@@ -269,11 +269,14 @@ table {
 #modal:target {
     opacity: 1;
     pointer-events: auto;
+
+    .modalTab.selected {
+        pointer-events: auto;
+    }
 }
 
 .modalTab.selected {
     display: inline-block;
-    pointer-events: auto;
 }
 
 .modalTab {

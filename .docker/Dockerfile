@@ -22,6 +22,8 @@ COPY --from=builder /app /app
 
 WORKDIR /app
 
+RUN chmod -R 777 ./
+
 EXPOSE 3010
 
 ENV NODE_ENV=production

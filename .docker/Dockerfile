@@ -1,5 +1,8 @@
 FROM node:16 as builder
 
+ENV GROUP_ID=1000 \
+    USER_ID=1000
+
 WORKDIR /app
 
 COPY package*.json ./
@@ -21,8 +24,6 @@ FROM node:16-alpine
 COPY --from=builder /app /app
 
 WORKDIR /app
-
-RUN chmod -R 777 ./
 
 EXPOSE 3010
 

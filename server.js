@@ -33,6 +33,6 @@ function main (){
     app.listen(port, () => console.log("Backend server live on " + port));
 
     app.get("/", (req, res) => {
-        res.send({ message: "We did it!" });    
+        res.sendFile('index.html', { root: './public' });   
     });
 }

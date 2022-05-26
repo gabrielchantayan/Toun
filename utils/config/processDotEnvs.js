@@ -7,5 +7,5 @@ let denv =
 REACT_APP_SERVER = ${process.env.SERVER_PORT}`
 
 export default async function processDotEnvs(){
-    await writeFile('client/.env', denv);
+    // await writeFile('client/.env', denv);
 }

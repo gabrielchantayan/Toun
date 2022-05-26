@@ -1,9 +1,10 @@
 import axios from "axios";
 
 let host = window.location.host 
+let protocol = window.location.protocol 
 
 // Base API call
-const baseURL = `http://${host}/api/`
+const baseURL = `${protocol}//${host}/api/`
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
 

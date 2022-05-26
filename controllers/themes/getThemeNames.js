@@ -1,9 +1,6 @@
 import asyncWrapper from '../../middleware/asyncWrapper.js';
 import loadThemeNames from '../../utils/themes/loadThemeNames.js';
 
-// @desc      Get config
-// @route     GET /api/config
-// @access    Public
 const get = asyncWrapper(async (req, res, next) => {
     
     let themes = await loadThemeNames()

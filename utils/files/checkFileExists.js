@@ -1,5 +1,6 @@
 import fs from 'fs'
 
+// Check if a file exists
 const checkFileExists = (path) => {
   return fs.promises
     .access(path, fs.constants.F_OK)

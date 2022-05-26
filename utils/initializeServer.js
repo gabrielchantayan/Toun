@@ -1,27 +1,83 @@
-import checkFileExists from './files/checkFileExists.js';
-import { copyFile, readFile, writeFile, mkdir, readdir } from 'fs/promises';
-import defaultConfig from '../defaults/config.json' assert {type: "json"};
-import 'dotenv/config' 
-import processDotEnvs from './config/processDotEnvs.js';
+// Module imports
+import 'dotenv/config'                                                          // DotEnv
+import { copyFile, readFile, writeFile, mkdir, readdir } from 'fs/promises';    // Filesystem promises
+import { readdirSync, statSync } from 'fs';                                     // For logging file tree
+import * as path from 'path';
+import * as url from 'url';
+// Script and file imports
+import checkFileExists from './files/checkFileExists.js';                       // Checking if a file exists
+import processDotEnvs from './config/processDotEnvs.js';                        // For development; transfers dotenvs to client
+import defaultConfig from '../defaults/config.json' assert {type: "json"};      // Load config as a JSON
 
-const logLangCreate = process.env.LOG_INIT_LANGCREATE   // Log locale messgaes
-const logInitConfig = process.env.LOG_INIT_CONFIG       // Log config messages
-const logInitCreate = process.env.LOG_INIT_CREATE       // Log other create messages
+// DotEnvs
+const logLangCreate = process.env.LOG_INIT_LANGCREATE || false  // Log locale messgaes
+const logInitConfig = process.env.LOG_INIT_CONFIG || false      // Log config messages
+const logInitCreate = process.env.LOG_INIT_CREATE || false      // Log other create messages
+const logFileTree   = process.env.LOG_FILE_TREE || false        // Log file tree
 
-// Logging
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = url.fileURLToPath(new URL('../', import.meta.url));
+
+
+//// 
+//// Logging
+////
+
+// Log items having to do with locale
 function logLocale(text) {
     if (logLangCreate == true) console.log(text)
 }
 
+// Log items having to do with config
 function logConfig(text) {
     if (logInitConfig == true) console.log(text)
 }
 
+// Log items having to do with misc. file creation
 function logCreate(text) {
     if (logInitCreate == true) console.log(text)
 }
 
-// Create config function
+// Log file tree
+let files, arrayOfFiles = [];   // Initial defs
+const ignoredPaths = ['node_modules', 'tools', 'git'];  // Paths to ignore in file tree
+// Function
+function fileTree(dirPath, arrayOfFiles){
+    
+    // Read files in current path
+    files = readdirSync(dirPath)
+
+    // If no files stored, set array to empty
+    // If files stored, set to files stored
+    arrayOfFiles = arrayOfFiles || []
+
+    // Iterate through files
+    files.forEach(function(file) {
+        // Create variable for the full path
+        let fullPath = dirPath + "/" + file;
+
+        // If it's a directory, test against ignored paths
+        // If directory contains ignored path, skip it
+        if (statSync(fullPath).isDirectory() && !ignoredPaths.some(p => fullPath.includes(p)) ) {
+            arrayOfFiles = fileTree(dirPath + "/" + file, arrayOfFiles)
+        } 
+        // If the file is not a directory add it to the files list
+        else { 
+            arrayOfFiles.push(path.join(__dirname, dirPath, "/", file))
+        }
+    })
+
+    // Return the file list
+    return arrayOfFiles
+}
+
+
+
+//// 
+//// File creation
+////
+
+// Create config 
 async function createConfig() {
 
     // Check if a config already exists
@@ -45,7 +101,7 @@ async function createConfig() {
 
     // Save file
     await writeFile('data/config.json', JSON.stringify(parsedConfig), null, 4);
-};
+}
 
 // Create locale files
 async function createLocales() {
@@ -87,7 +143,7 @@ async function createLocales() {
     }
 }
 
-// Pretty much just that
+// Get a list of all locales and add it to the config
 async function updateConfigWithLocales() {
     // Get all locales
     const locales = await readdir('data/locales');
@@ -112,10 +168,14 @@ async function updateConfigWithLocales() {
 
 }
 
-
+// Check if a file exists and if not then create it
 async function checkFileExistsAndCreate(file) {
     // Check if file already exists
-    const fileExists = await checkFileExists(`data/${file}.json`);
+    let fileExists = false;
+
+    // Docker is being strange so try/catch it
+    try { fileExists = await checkFileExists(`data/${file}.json`); }
+    catch (e) { console.log(e); fileExists = false; }
 
     // If not, create it
     if (!fileExists) {
@@ -125,9 +185,17 @@ async function checkFileExistsAndCreate(file) {
 }
 
 
-
+//// 
+//// Initialization
+////
 async function initialize(){
     console.log("Initializing server...");
+
+    // Log initial file tree
+    if (logFileTree == true){
+        console.log('\n\n\n--------------------\nInitial file tree:\n');
+        process.stdout.write(fileTree('./').join('\n') + '\n')
+    }
 
     // Feed dotenvs to client
     await processDotEnvs();
@@ -139,19 +207,23 @@ async function initialize(){
     // Check if data folder exists
     const dataFolderExists = await checkFileExists('data/');
 
+    // If data folder exists...
     if (dataFolderExists) {
         logLocale("Found data folder")
 
         // Check if locales folder exists
         const localeFolderExists = await checkFileExists('data/locales/');
+        // If not, then create
         (!localeFolderExists? await mkdir('data/locales') : logLocale('Found locales folder!'))
 
-    } else {
-
-        // If not then create data and locale folder
+    } 
+    // If not then create data and locale folder
+    else {
+        // Data folder
         logLocale('Creating data folder...')
         await mkdir('data').catch( (e) => { logLocale(`Failed to create data folder.\n${e}`)});
 
+        // Locales folder
         logLocale('Creating locales folder...')
         await mkdir('data/locales').catch( (e) => { logLocale(`Failed to create locales folder.\n${e}`)});;
     }
@@ -166,6 +238,12 @@ async function initialize(){
     await checkFileExistsAndCreate('apps');
     await checkFileExistsAndCreate('bookmarks');
     await checkFileExistsAndCreate('searchOptions');
+
+    // Log resulting file tree
+    if (logFileTree == true){
+        console.log('\n\n\n--------------------\nResulting file tree:\n');
+        process.stdout.write(fileTree('./').join('\n') + '\n')
+    }
 
 }
 

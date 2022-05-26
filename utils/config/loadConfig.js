@@ -3,6 +3,7 @@ import checkFileExists from '../files/checkFileExists.js';
 
 // Load config file
 const loadConfig = async () => {
+
     // Check if config exists
     const configExists = await checkFileExists('data/config.json');
 
@@ -11,9 +12,11 @@ const loadConfig = async () => {
         await createConfig();
     }
 
+    // Read and config file
     const config = await readFile('data/config.json', 'utf-8');
     const parsedConfig = JSON.parse(config);
 
+    // Return parsed config
     return parsedConfig;
 };
 

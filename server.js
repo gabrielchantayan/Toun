@@ -9,7 +9,7 @@ initialize().then( () => main())
 
 function main (){
     const app = express(),
-    port = process.env.SERVER_PORT || 3009;
+    port = process.env.SERVER_PORT || 3010;
 
     app.use(cors());
 

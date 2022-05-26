@@ -1,9 +1,9 @@
 import axios from "axios";
 
-let port = process.env.REACT_APP_SERVER || window.location.port
+let host = window.location.host 
 
 // Base API call
-const baseURL = `http://${window.location.hostname}:${port}/api/`
+const baseURL = `http://${host}/api/`
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
 

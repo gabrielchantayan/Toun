@@ -4,27 +4,27 @@ WORKDIR /app
 
 COPY package*.json ./
 
-# RUN npm install --production
+RUN npm install --production
 
-# COPY . .
+COPY . .
 
-# RUN mkdir -p ./public ./data \
-#     && cd ./client \
-#     && npm install --production \
-#     && npm run build \
-#     && cd .. \
-#     && mv ./client/build/* ./public \
-#     && rm -rf ./client
+RUN mkdir ./public \
+    && cd ./client \
+    && npm install --production \
+    && npm run build \
+    && cd .. \
+    && mv ./client/build/* ./public \
+    && rm -rf ./client
 
-# FROM node:16-alpine
+FROM node:16-alpine
 
-# COPY --from=builder /app /app
+COPY --from=builder /app /app
 
-# WORKDIR /app
+WORKDIR /app
 
-# EXPOSE 5005
+EXPOSE 3010
 
-# ENV NODE_ENV=production
-# ENV PASSWORD=flame_password
+ENV NODE_ENV=production
+ENV PORT=3010
 
-# CMD ["sh", "-c", "chown -R node /app/data && node server.js"]
+CMD ["npm", "run", "start"]

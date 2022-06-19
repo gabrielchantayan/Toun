@@ -2,7 +2,7 @@
     "info": {
         "language": "English",
         "short": "ENG",
-        "version": 3,
+        "version": 4,
         "authors": ["Gabriel Chantayan"]
     },
     "greetings": {
@@ -24,7 +24,9 @@
         "reading": "Reading",
         "programming": "Programming",
         "lifestyle": "Lifestyle",
-        "utilities": "Utilities"
+        "utilities": "Utilities",
+        "socialmedia": "Social Media",
+        "rss": "RSS"
     },
     "options": {
         "options": "Options",

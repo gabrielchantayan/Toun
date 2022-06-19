@@ -130,7 +130,7 @@ export default class Modal extends React.Component {
                     </section>
 
 
-                    <section id="modalAdminLogin" className="modalTab">
+                    {/* <section id="modalAdminLogin" className="modalTab">
                         <header class="modal-header">
                             <h1>{this.renderLocale('options')}</h1>
                             <a onClick={() => {this.changeTab('modalMainTab')}} title={'"' + this.renderLocale('adminLogin') + '"'} className="modal-close">
@@ -142,7 +142,7 @@ export default class Modal extends React.Component {
                             <PasswordForm ></PasswordForm>
                         </div>
 
-                    </section>
+                    </section> */}
 
 
                     <header id="modal-footer">
@@ -150,9 +150,9 @@ export default class Modal extends React.Component {
                         <span>
                             <Icon className="icon" icon={"mdi-github-box"} /><a href="https://github.com/gabrielchantayan/Toun/">GitHub</a>
                         </span>
-                        <span onClick={() => {this.changeTab('modalAdminLogin')}} >
+                        {/* <span onClick={() => {this.changeTab('modalAdminLogin')}} >
                             <Icon className = "icon" icon={"mdi-account-supervisor-circle"} /><a>  {this.renderLocale('adminLogin')} </a>
-                        </span>
+                        </span> */}
                     </header>
                 </div>
 
